@@ -1,0 +1,108 @@
+.keypad {
+  width: 100%;
+}
+
+.keypad-display {
+  margin-bottom: 15px;
+}
+
+.answer-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 2rem;
+  text-align: center;
+  border: 3px solid #667eea;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  color: #333;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.keypad-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.keypad-row {
+  display: flex;
+  gap: 10px;
+}
+
+.keypad-key {
+  flex: 1;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px solid #667eea;
+  border-radius: 10px;
+  background: white;
+  color: #667eea;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 60px;
+}
+
+.keypad-key:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.keypad-key:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.keypad-key:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.keypad-key.clear {
+  background: #ff9800;
+  color: white;
+  border-color: #ff9800;
+}
+
+.keypad-key.clear:hover:not(:disabled) {
+  background: #f57c00;
+  border-color: #f57c00;
+}
+
+.keypad-key.submit {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.keypad-key.submit:hover:not(:disabled) {
+  background: #388e3c;
+  border-color: #388e3c;
+}
+
+.keypad-key.submit:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .keypad-key {
+    padding: 15px;
+    font-size: 1.2rem;
+    min-height: 50px;
+  }
+
+  .answer-input {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+}
+
